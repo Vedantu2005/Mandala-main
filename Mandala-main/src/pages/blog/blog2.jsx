@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 import BlogCard from "../../component/BlogCard";
 
 const Article = () => {
+  // Related blog posts (Updated to link to other active blogs)
   const blogPosts = [
     {
-      image: "/book/1.png",
+      image: "/book/5.png",
       width: 321,
       height: 200,
       date: "Aug 2025",
@@ -12,31 +14,42 @@ const Article = () => {
       author: "Clay Boykin",
       category: "Soulful_Leadership",
       isLarge: false,
-      link: "/blog/blog3"
+      link: "/blog/blog3",
     },
     {
       image: "/book/1.png",
+      width: 375,
+      height: 250,
+      date: "Aug 2025",
+      title: "Finding the Still Point in a Noisy World",
+      author: "Clay Boykin",
+      category: "Quiet_Mind",
+      isLarge: false,
+      link: "/blog/blog1",
+    },
+    {
+      image: "/book/2.png",
       width: 321,
       height: 200,
       date: "Aug 2025",
-      title: "The Mandala Within cover revealed!",
+      title: "The Mandala Within and the MandalaMethod™ for Modern Seekers",
       author: "Clay Boykin",
-      category: "Soulful_Leadership",
+      category: "The_Mandala_Way",
       isLarge: false,
-      link: "/blog/blog2"
+      link: "/blog/blog4",
     },
   ];
 
   return (
-    <div className="min-h-screen ">
-      {/* Header Navigation */}
+    <div className="min-h-screen">
+      {/* Header Navigation with fixed top margin (mt-24) and Link */}
       <nav className="flex items-center justify-between px-4 md:px-8 py-4 text-sm ml-0 md:ml-68 mt-24">
         <div className="flex items-center space-x-2">
-          <a href="/articles">
+          <Link to="/articles">
             <span className="text-[#6640004D] font-lato font-semibold text-xs md:text-[12px] leading-[100%] tracking-[0%]">
               Articles
             </span>
-          </a>
+          </Link>
           <span className="text-amber-600 inline-block">
             <svg width="5" height="10" viewBox="0 0 5 10" fill="none">
               <path
@@ -64,7 +77,6 @@ const Article = () => {
               viewBox="0 0 27 29"
               fill="none"
             >
-              {/* ...SVG paths... */}
               <path
                 d="M14.374 0.201596C17.5174 -0.44778 17.9312 -0.00440025 22.8084 8.89536C27.3861 17.2044 27.5998 17.8425 26.0184 18.3267C23.1604 19.2383 22.2994 18.3423 17.0275 8.9326C12.7397 1.24768 12.5356 0.576029 14.374 0.201596Z"
                 fill="#CC7A00"
@@ -77,7 +89,7 @@ const Article = () => {
 
             <div>
               <h2 className="relative mt-4 md:mt-0 text-[52px] md:text-[72px] font-[Playfair_Display] font-semibold text-[#4D3000] leading-tight md:leading-[80px] tracking-[-0.03em] text-left ml-12">
-                The Mandala Within cover<br className="hidden md:block" /> revealed!  
+                The Mandala Within cover<br className="hidden md:block" /> revealed!
               </h2>
               <svg
                 className="absolute -top-10 right-0"
@@ -110,7 +122,7 @@ const Article = () => {
           </div>
 
           <p className="text-[#4D300080] ml-0 md:ml-24 text-start md:text-start text-[18px] md:text-[22px] leading-[100%] font-semibold font-[Lato] mb-4 max-w-2xl mx-auto">
-           Take a look at the cover of book The Mandala Within! Can you spot anything that might indicate what’s going to happen in the book?
+            Take a look at the cover of book The Mandala Within! Can you spot anything that might indicate what’s going to happen in the book?
           </p>
 
           <div
@@ -147,7 +159,7 @@ const Article = () => {
             Throughout my own journey, I've traced the presence of mandalas from ancient Tibetan sand paintings to Hindu cosmological diagrams, and from Gothic cathedral rose windows to Jung's psychological archetypes—each one revealing itself where humans sought to map the territory between mind and mystery. Even in Neolithic times the apparently crude circles made of megalithic columns adorned with symbols had meaning beyond the practical—an attempt to make tangible the unknown?
           </p>
           <p>
-            These sacred geometric patterns, whose Sanskrit name I learned simply means 'circle,’ havespoken to me across cultural boundaries as a universal language of wholeness and integration. When I sit with a mandala, losing myself in the interplay between its geometrically precise patterns and radiating symbols, I am reminded of a profound truth:
+            These sacred geometric patterns, whose Sanskrit name I learned simply means 'circle,’ have spoken to me across cultural boundaries as a universal language of wholeness and integration. When I sit with a mandala, losing myself in the interplay between its geometrically precise patterns and radiating symbols, I am reminded of a profound truth:
           </p>
           <p className="font-bold text-center">
             These circular forms mirror the vast architecture of the cosmos and the infinite depths of the unconscious — their four-cornered grid within the circle symbolizing stability, structure, and grounding.
@@ -155,7 +167,6 @@ const Article = () => {
           <p>
             I've come to understand that mandalas are more than mere symbols—they are transformative. When I create them—whether through drawing, painting, or arranging patterns in other ways — I engage in an active process of unity and healing that fosters self-discovery, bringing peace and clarity. As I connect with these geometric and symbolic forms, I find myself lifted beyond daily distractions, experiencing a unity that transcends the ordinary and reminds me that I am part of something far more significant.
           </p>
-          
         </article>
 
         {/* Bottom Section */}
@@ -219,7 +230,7 @@ const Article = () => {
                   fontStyle: "normal",
                   fontSize: "22px",
                   letterSpacing: "0%",
-                  color: "#66400080", // This is equivalent to Tailwind's amber-600
+                  color: "#66400080",
                 }}
               >
                 <p>
@@ -235,7 +246,7 @@ const Article = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="bg-[#CC7A00] hover:bg-[#664000] cursor-pointer text-white px-8 py-4 rounded-lg text-lg font-medium transition-all duration-300 transform  shadow-lg hover:shadow-xl">
+                  <button className="bg-[#CC7A00] hover:bg-[#664000] cursor-pointer text-white px-8 py-4 rounded-lg text-lg font-medium transition-all duration-300 transform shadow-lg hover:shadow-xl">
                     Book Complimentary 1:1 Session
                   </button>
                 </a>
@@ -250,7 +261,7 @@ const Article = () => {
                   fontStyle: "normal",
                   fontSize: "16px",
                   letterSpacing: "0%",
-                  color: "#66400080", // This is equivalent to Tailwind's amber-600
+                  color: "#66400080",
                 }}
               >
                 <p>No cost. Just presence.</p>

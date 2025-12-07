@@ -1,21 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 import BlogCard from "../../component/BlogCard";
 
 const Article = () => {
+  // Related blog posts
   const blogPosts = [
     {
-      image: "/book/1.png",
-      width: 321,
-      height: 200,
-      date: "Aug 2025",
-      title: "The Mandala Within: Why Author Clay Boykin Says Inner Peace Begins with Awareness",
-      author: "Clay Boykin",
-      category: "Soulful_Leadership",
-      isLarge: false,
-      link: "/blog/blog3"
-    },
-    {
-      image: "/book/1.png",
+      image: "/book/4.png",
       width: 321,
       height: 200,
       date: "Aug 2025",
@@ -23,20 +14,42 @@ const Article = () => {
       author: "Clay Boykin",
       category: "Soulful_Leadership",
       isLarge: false,
-      link: "/blog/blog2"
+      link: "/blog/blog2",
+    },
+    {
+      image: "/book/1.png",
+      width: 375,
+      height: 250,
+      date: "Aug 2025",
+      title: "Finding the Still Point in a Noisy World",
+      author: "Clay Boykin",
+      category: "Quiet_Mind",
+      isLarge: false,
+      link: "/blog/blog1",
+    },
+    {
+      image: "/book/6.png",
+      width: 321,
+      height: 200,
+      date: "Aug 2025",
+      title: "Archetypes and the Inner Mandala: Clay Boykin’s Psychological Insights",
+      author: "Clay Boykin",
+      category: "The_MandalaMethod™",
+      isLarge: false,
+      link: "/blog/blog5",
     },
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Header Navigation */}
+      {/* Header Navigation with fixed top margin (mt-24) and Link */}
       <nav className="flex items-center justify-between px-4 md:px-8 py-4 text-sm ml-0 md:ml-68 mt-24">
         <div className="flex items-center space-x-2">
-          <a href="/articles">
+          <Link to="/articles">
             <span className="text-[#6640004D] font-lato font-semibold text-xs md:text-[12px] leading-[100%] tracking-[0%]">
               Articles
             </span>
-          </a>
+          </Link>
           <span className="text-amber-600 inline-block">
             <svg width="5" height="10" viewBox="0 0 5 10" fill="none">
               <path
@@ -64,7 +77,6 @@ const Article = () => {
               viewBox="0 0 27 29"
               fill="none"
             >
-              {/* ...SVG paths... */}
               <path
                 d="M14.374 0.201596C17.5174 -0.44778 17.9312 -0.00440025 22.8084 8.89536C27.3861 17.2044 27.5998 17.8425 26.0184 18.3267C23.1604 19.2383 22.2994 18.3423 17.0275 8.9326C12.7397 1.24768 12.5356 0.576029 14.374 0.201596Z"
                 fill="#CC7A00"
@@ -127,7 +139,7 @@ const Article = () => {
         {/* Hero Image */}
         <div className="mb-12 w-full flex justify-center">
           <img
-            src="/book/1.png"
+            src="/book/5.png"
             alt="Person sitting peacefully in nature reading under a tree"
             className="rounded-[24px] object-cover w-full h-auto md:w-[750px] md:h-[501px] mx-auto"
           />
