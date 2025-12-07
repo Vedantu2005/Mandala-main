@@ -1,0 +1,17 @@
+@import "tailwindcss";
+body {
+  min-height: 100vh;
+  background-image: 
+    linear-gradient(0deg, #FFF5E4, #FFF5E4),
+    radial-gradient(100% 10.09% at 100% 0%, #FFFFFF 0%, rgba(255, 251, 244, 0) 100%),
+    linear-gradient(0deg, color(display-p3 1.000 0.965 0.902), color(display-p3 1.000 0.965 0.902)),
+    radial-gradient(100% 10.09% at 100% 0%, color(display-p3 1.000 1.000 1.000) 0%, color(display-p3 1.000 0.984 0.961 / 0) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Custom Shadow Utility (optional if not extending in tailwind.config.js) */
+.shadow-inner-gradient-top {
+  box-shadow: inset 0 40px 40px -20px rgba(255, 255, 255, 0.8);
+}
